@@ -362,7 +362,7 @@ If the matching event does not contain the attribute in its definition, the vari
 
 #### Explorer link
 
-Use `{{log.link}}`, `{{span.link}}`, and `{{rum.link}}` to enrich the notification with a link to the Log Explorer, Trace Explorer, or RUM Explorer, scoped on the events matching the query.
+Use `{{log.link}}`, `{{span.link}}`, `{{rum.link}}`, and `{{issue.link}}` to enrich the notification with a link to the Log Explorer, Trace Explorer, RUM Explorer, or Error Tracking, scoped on the events matching the query.
 
 ### Check monitor variables
 
@@ -542,6 +542,7 @@ To include a comment in the monitor message that only displays in the monitor ed
 
 ```text
 {{!-- this is a comment --}}
+{{!-- this is a comment }}
 ```
 
 ### Raw format
