@@ -27,13 +27,13 @@ Injection styles can be configured using:
 
 - Environment Variable: `DD_TRACE_PROPAGATION_STYLE_INJECT="Datadog B3"`
 
-The value of the environment variable is a comma (or space) separated list of header styles that are enabled for injection. By default only Datadog injection style is enabled.
+The value of the environment variable is a comma (or space) separated list of header styles that are enabled for injection. The default injection styles are `datadog,tracecontext`.
 
 Extraction styles can be configured using:
 
 - Environment Variable: `DD_TRACE_PROPAGATION_STYLE_EXTRACT="Datadog B3"`
 
-The value of the environment variable is a comma (or space) separated list of header styles that are enabled for extraction. By default only Datadog extraction style is enabled.
+The value of the environment variable is a comma (or space) separated list of header styles that are enabled for extraction. The default extraction styles are `datadog,tracecontext`.
 
 If multiple extraction styles are enabled, the extraction attempt is done on the order those styles are configured and first successful extracted value is used.
 

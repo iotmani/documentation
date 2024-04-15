@@ -34,8 +34,8 @@ The environment variable values are comma-separated lists of header styles enabl
 
 **Notes**: 
 
-- Starting from version [2.22.0](https://github.com/DataDog/dd-trace-dotnet/releases/tag/v2.22.0), the default injection style is `tracecontext, Datadog`, so the W3C Trace Context is used, followed by the Datadog headers. Prior to version 2.22.0, only the `Datadog` injection style is enabled.
-- Starting from version [2.42.0](https://github.com/DataDog/dd-trace-dotnet/releases/tag/v2.42.0), when multiple extractors are specified, the `DD_TRACE_PROPAGATION_EXTRACT_FIRST=true` configuration specifies whether context extraction should exit immediately upon detecting the first valid `tracecontext`. The default value is `false`.
+- The default injection style is `datadog,tracecontext`, so the Datadog headers is used, followed by the W3C Trace Context.
+- When multiple extractors are specified, the `DD_TRACE_PROPAGATION_EXTRACT_FIRST=true` configuration specifies whether context extraction should exit immediately upon detecting the first valid `tracecontext`. The default value is `false`.
 
 In most cases, headers extraction and injection are transparent. There are some known cases where your distributed trace can be disconnected. For instance, when reading messages from a distributed queue, some libraries may lose the span context. It also happens if you set `DD_TRACE_KAFKA_CREATE_CONSUMER_SCOPE_ENABLED` to `false` when consuming Kafka messages. In that case, you can add a custom trace using the following code:
 
