@@ -210,7 +210,7 @@ For example, to send 50% of the traces for the service named `my-service` and 10
 @env DD_TRACE_SAMPLING_RULES=[{"service": "my-service", "sample_rate": 0.5}]
 ```
 
-C++ does not provide integrations for out-of-the-box instrumentation, but it's used by proxy tracing such as Envoy, Nginx, or Istio. Read more about how to configure sampling for proxies in [Tracing proxies][2].
+C++ does not provide integrations for automatic instrumentation, but it's used by proxy tracing such as Envoy, Nginx, or Istio. Read more about how to configure sampling for proxies in [Tracing proxies][2].
 
 [1]: https://github.com/DataDog/dd-trace-cpp/releases/tag/v0.1.0
 [2]: /tracing/trace_collection/proxy_setup
